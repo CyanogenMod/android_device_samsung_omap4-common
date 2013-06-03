@@ -1443,6 +1443,8 @@ static int responseCallList(Parcel &p, void *response, size_t responselen) {
         p.writeInt32(p_cur->numberPresentation);
         writeStringToParcel(p, p_cur->name);
         p.writeInt32(p_cur->namePresentation);
+        p.writeInt32(0); /* UUS Information is absent */
+
         appendPrintBuf("%s[id=%d,%s,toa=%d,",
             printBuf,
             p_cur->index,
