@@ -65,5 +65,5 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
 
 $(call inherit-product, hardware/ti/omap4xxx/omap4.mk)
 
-# Include non-opensource parts if available
-$(call inherit-product-if-exists, vendor/samsung/omap4-common/common-vendor.mk)
+# Include non-opensource parts
+$(call inherit-product, vendor/samsung/omap4-common/common-vendor.mk)
