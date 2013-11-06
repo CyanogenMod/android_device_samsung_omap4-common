@@ -53,7 +53,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     omap.enhancement=true \
     ro.telephony.ril_class=SamsungExynos4RIL \
     ro.telephony.call_ring.multiple=false \
-    ro.telephony.call_ring.delay=3000
+    ro.telephony.call_ring.delay=3000 \
+    ro.bq.gpu_to_cpu_unsupported=1
 
 # SGX540 is slower with the scissor optimization enabled
 PRODUCT_PROPERTY_OVERRIDES += \
