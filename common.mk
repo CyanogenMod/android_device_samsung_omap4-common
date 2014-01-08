@@ -36,12 +36,6 @@ PRODUCT_PACKAGES += \
     tinycap \
     tinymix
 
-# Support for Browser's saved page feature. This allows
-# for pages saved on previous versions of the OS to be
-# viewed on the current OS.
-PRODUCT_PACKAGES += \
-    libskia_legacy
-
 # Filesystem management tools
 PRODUCT_PACKAGES += \
     static_busybox \
