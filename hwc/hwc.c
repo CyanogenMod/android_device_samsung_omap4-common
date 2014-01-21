@@ -2350,7 +2350,8 @@ static void *omap4_hwc_vsync_sysfs_loop(void *data)
     do {
         ssize_t len = read(vsync_timestamp_fd, buf, sizeof(buf));
         timestamp = strtoull(buf, NULL, 0);
-        hwc_dev->procs->vsync(hwc_dev->procs, 0, timestamp);
+        if(hwc_dev->procs)
+            hwc_dev->procs->vsync(hwc_dev->procs, 0, timestamp);
         select(vsync_timestamp_fd + 1, NULL, NULL, &exceptfds, NULL);
         lseek(vsync_timestamp_fd, 0, SEEK_SET);
     } while (1);
