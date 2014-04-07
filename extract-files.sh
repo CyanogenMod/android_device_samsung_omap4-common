@@ -91,6 +91,7 @@ GRALLOC_SYMLINK := \$(TARGET_OUT_VENDOR)/lib/hw/gralloc.\$(TARGET_BOARD_PLATFORM
 \$(GRALLOC_SYMLINK): \$(LOCAL_INSTALLED_MODULE) \$(LOCAL_PATH)/Android.mk
 	@echo "Symlink: \$@ -> \$(GRALLOC_FILE)"
 	@rm -rf \$@
+	\$(hide) mkdir -p \$(dir \$@)
 	\$(hide) ln -fs \$(GRALLOC_FILE) \$@
 
 ALL_DEFAULT_INSTALLED_MODULES += \$(GRALLOC_SYMLINK)
