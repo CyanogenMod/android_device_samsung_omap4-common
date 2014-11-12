@@ -25,7 +25,9 @@ PRODUCT_PACKAGES += \
     libstagefrighthw \
     smc_pa_ctrl \
     tf_daemon \
-    libcorkscrew
+    libcorkscrew \
+    pvrsrvinit \
+    libPVRScopeServices.so
 
 PRODUCT_PACKAGES += \
     audio.a2dp.default \
