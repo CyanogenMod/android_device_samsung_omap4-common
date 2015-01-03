@@ -62,9 +62,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     persist.sys.usb.config=mtp
 
-ifneq ($(filter p3100 p3110 p5100 p5110,$(TARGET_DEVICE)),)
+# Include omap4 specific parts
 $(call inherit-product, hardware/ti/omap4xxx/omap4.mk)
-endif
 
 # Include non-opensource parts
 $(call inherit-product, vendor/samsung/omap4-common/common-vendor.mk)
