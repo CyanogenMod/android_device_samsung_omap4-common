@@ -60,6 +60,22 @@ TARGET_RUNNING_WITHOUT_SYNC_FRAMEWORK := true
 # Setup custom omap4xxx defines
 BOARD_USE_CUSTOM_LIBION := true
 
+# SELinux
+BOARD_SEPOLICY_DIRS += \
+    device/samsung/omap4-common/sepolicy
+
+BOARD_SEPOLICY_UNION += \
+    bluetooth.te \
+    device.te \
+    domain.te \
+    file.te \
+    file_contexts \
+    init.te \
+    pvrsrvinit.te \
+    radio.te \
+    rild.te \
+    wpa_supplicant.te
+
 # TI Enhancement Settings (Part 1)
 OMAP_ENHANCEMENT := true
 #OMAP_ENHANCEMENT_BURST_CAPTURE := true
