@@ -43,6 +43,10 @@ EXTENDED_FONT_FOOTPRINT := true
 # Platform
 TARGET_BOARD_PLATFORM := omap4
 
+# We don't support cursor layers, which when attempting to use them,
+# results in no cursors (mouse or otherwise) displayed on the screen.
+TARGET_DISABLE_CURSOR_LAYER := true
+
 # RIL
 BOARD_PROVIDES_LIBRIL := true
 BOARD_MODEM_TYPE := xmm6260
